@@ -15,4 +15,10 @@ app.use('/sub', function (req, res) {
     res.send(prefix + calc.sub(args));
 });
 
+app.use('/mul', function (req, res) {
+    const args = req.path.substring(1).split('/');
+    const calc = new Calculator();
+    res.send(prefix + calc.multiply(args));
+});
+
 app.listen(3000);

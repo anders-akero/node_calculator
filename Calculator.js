@@ -1,7 +1,7 @@
 'use strict';
 
 class Calculator {
-    constructor(sum = 0) {
+    constructor(sum = null) {
         this.sum = sum;
     }
 
@@ -15,6 +15,16 @@ class Calculator {
     sub(args) {
         for (const arg of args) {
             this.sum -= parseInt(arg);
+        }
+        return this.sum;
+    }
+
+    multiply(args) {
+        if (this.sum === null) {
+            this.sum = 1;
+        }
+        for (const arg of args) {
+            this.sum *= parseInt(arg);
         }
         return this.sum;
     }

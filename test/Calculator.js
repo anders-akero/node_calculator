@@ -18,4 +18,12 @@ describe('Calculator', function () {
             assert.equal(calc.sub(args), -15);
         });
     });
+
+    describe('#multiply()', function () {
+        it('should return the multiplicated value of given arguments', function () {
+            const args = [5, 5, 5];
+            const calc = new Calculator();
+            assert.equal(calc.multiply(args), 125);
+        });
+    });
 });
