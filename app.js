@@ -9,4 +9,10 @@ app.use('/add', function (req, res) {
     res.send(prefix + calc.add(args));
 });
 
+app.use('/sub', function (req, res) {
+    const args = req.path.substring(1).split('/');
+    const calc = new Calculator();
+    res.send(prefix + calc.sub(args));
+});
+
 app.listen(3000);

@@ -11,6 +11,13 @@ class Calculator {
         }
         return this.sum;
     }
+
+    sub(args) {
+        for (const arg of args) {
+            this.sum -= parseInt(arg);
+        }
+        return this.sum;
+    }
 }
 
 module.exports = Calculator;
