@@ -26,4 +26,12 @@ describe('Calculator', function () {
             assert.equal(calc.multiply(args), 125);
         });
     });
+
+    describe('#divide()', function () {
+        it('should return the divided value of given arguments', function () {
+            const args = [5, 5, 5];
+            const calc = new Calculator();
+            assert.equal(calc.divide(args), 0.008);
+        });
+    });
 });

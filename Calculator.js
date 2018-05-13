@@ -28,6 +28,16 @@ class Calculator {
         }
         return this.sum;
     }
+
+    divide(args) {
+        if (this.sum === null) {
+            this.sum = 1;
+        }
+        for (const arg of args) {
+            this.sum /= parseInt(arg);
+        }
+        return this.sum;
+    }
 }
 
 module.exports = Calculator;
